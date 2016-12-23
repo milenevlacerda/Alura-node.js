@@ -142,3 +142,34 @@ $ sudo npm install express-validator --save
 ```
 req.assert( 'titulo', 'O Título é obrigatório!' ).notEmpty();
 ```
+
+#### Aula 06 - Entendendo função require, objeto module e callbacks
+-------------------------
+**Função require() e objeto module**
+*A função require retorna o objeto module, assim é possível acessá-lo dentro do nosso módulo em si.*
+
+**Callbaks**
+
+*São utilizados para que o processador não fique parado esperando o retorno de uma requisição, assim ele guarda a função que queremos executar e roda ela quando estiver dado o retorno da solicitação.*
+
+
+#### Aula 07 - Testes e Integração
+-------------------------
+**Mocha**
+*Instalação*
+
+```
+$ sudo npm intall mocha --save-dev
+```
+
+*Rodando testes*
+
+```
+$ node_modules/mocha/bin/mocha
+```
+
+*Para facilitar a escrita de testes: Bilioteca 'supertest'*
+
+```
+$ sudo npm install supertest --save-dev
+```

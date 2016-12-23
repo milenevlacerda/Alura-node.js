@@ -1,11 +1,16 @@
 module.exports = function( app ) {
 
-    var listaProdutos = function( req, res ) {
+    var listaProdutos = function( req, res, next ) {
 
         var connection = app.infra.connectionFactory();
         var produtosDAO = new app.infra.ProdutosDAO( connection );
 
         produtosDAO.lista( function( error, results ) {
+
+            if( error ) {
+                return next( error );
+            }
+
             res.format({
                 html: function() {
                     res.render( 'produtos/lista', { lista: results } );
