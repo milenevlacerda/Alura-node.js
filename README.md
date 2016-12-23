@@ -40,10 +40,60 @@ app.listen(3000, function(){
 
 });
 ```
-*Criando rota*
+*Criando rota e retornando atravéz do .send()*
 ```
 app.get( '/produtos', function( req, res ){
     res.send( "<html><body><h1>Listagem de produtos</h1></body></html>" );
 });
 
+```
+
+*Criando rota e retornando atravéz do .render()*
+```
+app.get( '/produtos', function( req, res ){
+    res.render( "produtos/lista" );    
+});
+
+```
+
+*Definindo variáveis para dentro do express*
+```
+app.set( 'view engine', 'ejs' );
+```
+
+*Instalando **Nodemon***
+```
+$ sudo npm install -g nodemon
+```
+*ROdando o **Nodemon***
+```
+$ nodemon app
+```
+
+#### Aula 02 - Anotações
+-------------------------
+***Commonjs***
+*É um modo fazer requisições de módulos no JavaScript, e o node o reconhece pelo objeto 'module', e a função é passada para o atributo 'exports'*
+
+*Conectando ao banco*
+
+```
+var mysql = require( 'mysql' );
+
+module.exports = function(){
+
+    return mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: 'root',
+        database: 'casadocodigo_nodejs'
+    });
+
+};
+
+```
+
+*Para o carregamento automático de rotas*
+```
+$ npm install express-load --save
 ```
