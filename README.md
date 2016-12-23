@@ -1,7 +1,7 @@
 # Curso Node.js: Inovando com Javascript no backend
 
 
-#### Aula 01 - Anotações
+#### Aula 01 - Instalação do Node
 -------------------------
 
 *Para rodar um arquivo Node:*
@@ -70,7 +70,7 @@ $ sudo npm install -g nodemon
 $ nodemon app
 ```
 
-#### Aula 02 - Anotações
+#### Aula 02 - Coesão e Acoplamento, organizando o código
 -------------------------
 ***Commonjs***
 *É um modo fazer requisições de módulos no JavaScript, e o node o reconhece pelo objeto 'module', e a função é passada para o atributo 'exports'*
@@ -97,3 +97,21 @@ module.exports = function(){
 ```
 $ npm install express-load --save
 ```
+
+#### Aula 03 - Verbos HTTP
+-------------------------
+
+**Body Parser**
+*Preenche a propriedade 'body' do request*
+*Instalando o body-parser*
+
+```
+$ sudo npm install body-parser --save
+```
+
+**Verbos HTTP**
+*Definem operações que podem ser feitas sobre o HTTP*
+
+
+#### Aula 04 - Content Negotiation
+-------------------------

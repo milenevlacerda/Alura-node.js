@@ -9,20 +9,20 @@
 <body>
     <table border='1px'>
         <tr>
-            <td>id</td>
-            <td>Titulo</td>
-            <td>descricao</td>
-            <td>preco</td>
+            <td>ID</td>
+            <td>Título</td>
+            <td>Descrição</td>
+            <td>Preço</td>
         </tr>
-        <%for(var i=0;i<lista.length;i++) {%>
+        <% for( var i = 0; i < lista.length; i++ ) { %>
             <tr>
-                <td><%=lista[i].id%></td>
-                <td><%=lista[i].titulo%></td>
-                <td><%=lista[i].descricao%></td>
-                <td><%=lista[i].preco%></td>
+                <td><%= lista[ i ].id %></td>
+                <td><%= lista[ i ].titulo %></td>
+                <td><%= lista[ i ].descricao %></td>
+                <td><%= lista[ i ].preco %></td>
             </tr>
-        <%}%>
-    </table>
+        <% } %>
+        </table>
 
-</body>
-</html>
+    </body>
+    </html>
