@@ -115,3 +115,30 @@ $ sudo npm install body-parser --save
 
 #### Aula 04 - Content Negotiation
 -------------------------
+*Torna possível servir diferentes formatos de um mesmo conteúdo a partir da mesma url*
+
+```
+res.format({
+    html: function() {
+        res.render( 'produtos/lista', { lista: results } );
+    },
+    json: function() {
+        res.json( results );
+    }
+});
+```
+
+#### Aula 05 - Respeitando o accept
+-------------------------
+**Express Validator**
+*Instalação*
+
+```
+$ sudo npm install express-validator --save
+```
+
+*Exemplo de código*
+
+```
+req.assert( 'titulo', 'O Título é obrigatório!' ).notEmpty();
+```

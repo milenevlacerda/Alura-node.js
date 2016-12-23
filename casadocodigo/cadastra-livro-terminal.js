@@ -4,9 +4,11 @@ var configuracoes = {
     hostname: 'localhost',
     port: 3000,
     path: '/produtos',
+    method: 'post',
     headers: {
-        'Accept': 'application/json'
-        // 'Accept': 'text/html'
+        // 'Accept': 'text/html',
+        'Accept': 'application/json',
+        'Content-type': 'application/json'
     }
 };
 
@@ -19,9 +21,9 @@ var client = http.request( configuracoes, function( res ) {
 });
 
 var produto = {
-    titulo: 'Mais sobre node',
+    titulo: '',
     descricao: 'Node, javascript e um pouco sobre HTTP',
     preco: 100
 };
 
-client.end( JSON.stringfy( produto ) );
+client.end( JSON.stringify( produto ) );
