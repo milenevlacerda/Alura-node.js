@@ -6,8 +6,14 @@ module.exports = function( app ) {
         var produtosDAO = new app.infra.ProdutosDAO( connection );
 
         produtosDAO.lista( function( error, results ) {
-
-            res.render( 'produtos/lista', { lista: results } );
+            res.format({
+                html: function() {
+                    res.render( 'produtos/lista', { lista: results } );
+                },
+                json: function() {
+                    res.json( results );
+                }
+            });
 
         });
 
@@ -28,10 +34,7 @@ module.exports = function( app ) {
         var produtosDAO = new app.infra.ProdutosDAO( connection );
 
         produtosDAO.salva( produto, function( error, results ){
-
             res.redirect( '/produtos' );
-            // listaProdutos( req, res );
-
         });
 
     });
