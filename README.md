@@ -181,3 +181,7 @@ $ sudo npm install supertest --save-dev
 ```
 $ sudo npm install socket.io --save
 ```
+
+#### Aula 09 - Middlewares
+
+*O Middleware é basicamente uma função intermediária que é executa alguma atividade e continua com o fluxo do sistema.*
