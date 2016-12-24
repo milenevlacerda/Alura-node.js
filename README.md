@@ -173,3 +173,11 @@ $ node_modules/mocha/bin/mocha
 ```
 $ sudo npm install supertest --save-dev
 ```
+
+#### Aula 08 - WebSockets com socket.io
+-------------------------
+*Instalando Socket.io*
+
+```
+$ sudo npm install socket.io --save
+```
